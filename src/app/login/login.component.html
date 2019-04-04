@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+  <div class="col-sm-4">
+    <h1>Login</h1>
+    <form (ngSubmit)="onLoginSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          [ngClass]="{'is-invalid': loginForm.submitted && !email.valid}"
+          placeholder="Email"
+          ngModel
+          name="email"
+          email
+          required
+          #email="ngModel">
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password"
+          ngModel
+          name="password"
+          required
+          #password="ngModel">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Submit</button>
+    </form>
+  </div>
+</div>
