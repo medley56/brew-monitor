@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  envName: 'production',
+  apiBaseUrl: 'https://gavinmedley.com/brewmonitor-api'
 };

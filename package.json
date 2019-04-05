@@ -1,6 +1,6 @@
 {
   "name": "brew-monitor",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -46,4 +46,4 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
   }
-
+}

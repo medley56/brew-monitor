@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="/home" class="navbar-brand">Fermonitor</a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavHamburgerDropdown()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{show: hamburgerDropdownOpen}">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/monitoring" class="nav-link">Monitor</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/control" class="nav-link">Control</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/archive" class="nav-link">Past Brews</a>
+      </li>
+    </ul>
+  </div>
+</nav>
