@@ -1,0 +1,5 @@
+{{ newBrewForm.value.name }}
+<form [formGroup]="newBrewForm" (ngSubmit)="onFormSubmit()">
+  <label for="newBrewName">Fermentation Name:</label>
+  <input id="newBrewName" type="text" formControlName="name">
+</form>
