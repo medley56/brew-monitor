@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { concat, merge, Observable } from 'rxjs';
 import { Fermentation } from '../models/fermentation.model';
@@ -19,8 +19,9 @@ export class BrewMonitorApiService {
     return this.http.get<Fermentation>(this.baseUrl + '/fermentations/' + id);
   }
 
-  getFermentationList(): Observable<Fermentation[]> {
-    return this.http.get<Fermentation[]>(this.baseUrl + '/fermentations/');
+  getFermentationList(active: boolean): Observable<Fermentation[]> {
+    console.log(this.baseUrl);
+    return this.http.get<Fermentation[]>(this.baseUrl + `/fermentations/?active=${active}`);
   }
 
   createNewFermentation(newFermentation: Fermentation, newDatasets: Dataset[]): Observable<Fermentation> {

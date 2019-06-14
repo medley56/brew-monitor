@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import {NewFermentationComponent} from './new-fermentation/new-fermentation.component';
+import { FermentationListComponent } from './fermentation-list/fermentation-list.component';
+import { FermentationDetailComponent } from './fermentation-detail/fermentation-detail.component';
 
 const routes: Routes = [
   {path: '', component: MonitoringComponent},
+  {path: 'fermentation-list', component: FermentationListComponent},
+  {path: 'fermentation-detail/:id', component: FermentationDetailComponent},
   {path: 'new-brew', component: NewFermentationComponent}
 ];
 

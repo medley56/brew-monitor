@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BrewMonitorApiService } from '../../shared/services/brew-monitor-api.service';
+import { Fermentation } from '../../shared/models/fermentation.model';
 
 @Component({
   selector: 'app-fermentation-list',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fermentation-list.component.css']
 })
 export class FermentationListComponent implements OnInit {
+  fermentationList: Fermentation[];
 
-  constructor() { }
+  constructor(
+    private apiService: BrewMonitorApiService
+  ) { }
 
   ngOnInit() {
+    this.apiService.getFermentationList(true).subscribe((list: Fermentation[]) => {
+      this.fermentationList = list;
+      console.log(list);
+    });
   }
 
 }

@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   envName: 'production',
-  apiBaseUrl: 'https://gavinmedley.com/brewmonitor-api'
+  apiBaseUrl: 'http://localhost:8000/brewmonitor-api'
 };

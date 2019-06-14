@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   envName: 'development',
-  apiBaseUrl: 'http://localhost:4200/brew-monitor/api'
+  apiBaseUrl: 'http://localhost:8000/brew-monitor/api'
 };
 
 /*
