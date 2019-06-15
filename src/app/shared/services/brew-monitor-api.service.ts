@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { concat, merge, Observable } from 'rxjs';
-import { Fermentation } from '../models/fermentation.model';
-import { Dataset } from '../models/dataset.model';
+import { Dataset, Fermentation } from '../models/api-models.model';
+
 
 @Injectable({
   providedIn: 'root'

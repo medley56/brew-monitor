@@ -1,3 +1,20 @@
-<p>
-  fermentation-list works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Datasets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fermentation of fermentationList" [routerLink]="'../fermentation-detail/'+fermentation.id">
+          <td>{{ fermentation.id }}</td>
+          <td>{{ fermentation.name }}</td>
+          <td>{{ fermentation.datasets.length }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

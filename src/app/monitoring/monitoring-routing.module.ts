@@ -6,10 +6,12 @@ import { FermentationListComponent } from './fermentation-list/fermentation-list
 import { FermentationDetailComponent } from './fermentation-detail/fermentation-detail.component';
 
 const routes: Routes = [
-  {path: '', component: MonitoringComponent},
-  {path: 'fermentation-list', component: FermentationListComponent},
-  {path: 'fermentation-detail/:id', component: FermentationDetailComponent},
-  {path: 'new-brew', component: NewFermentationComponent}
+  {path: '', component: MonitoringComponent,
+  children: [
+    {path: 'fermentation-list', component: FermentationListComponent},
+    {path: 'fermentation-detail/:id', component: FermentationDetailComponent},
+    {path: 'new-brew', component: NewFermentationComponent}
+  ]},
 ];
 
 @NgModule({
